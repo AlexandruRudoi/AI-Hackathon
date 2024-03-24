@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  quality-score-extractor:
+    image: intellidockers/quality-score-extractor:2.1-20230203
+    container_name: intellidockers_quality-score-extractor
+    ports:
+      - "8989:8989"
+    environment:
+      - METADATA_EXTRACTOR_HOST=http://172.28.80.1:8990
+      - CONTENT_EXTRACTOR_HOST=http://172.28.80.1:8991
+      - ENTITY_EXTRACTOR_HOST=http://172.28.80.1:8992
+      - SENTIMENT_EXTRACTOR_HOST=http://172.28.80.1:8993
+      - CONCURRENCY_LEVEL=8
+      - LICENSE=+0WhCYhnbJ1/EDM5Sk9wwHvf8vgVI3snc7+za8ISXiEjgfg8kT1EEWWB1ME/pftBiNAYv7rjGbcVjnCjp9dtdsI7svMWet8DI5YzUczR5lQkRXpRceCSgx/3HHZ6le5P/R0zmQ+iWIl0jE97r8bMSFHm+x/DTlqEYT9qEFfZHTjssJDnw5Lpjwr9Rqqc3h1PieU3++3KUw9A9CaSDqXOfllqdKrOIWOZoL2+SBSoszeczmVbBR99Tr2u9UWpEmYdllqLlpThEYV/k7gZZ1ubbBuPIA2i7VR0uL7qtUNFo8rUH+txhYOgtgF2UVii3tGjEBLxHYw+kSy9+qParfve1Ddub8pDhBuaapfRERax2esyM/ts/PYvZJ2cP2+xECnnjiLtpn9o3mIGRHezO2MoRTPFp7zzOJS50pC3gkTseqcNGWMHwsYqFT6MW9dNaFYtPibDUZqV5gUftQMj+SEIQMoltV3hq91/r4pHBhxY4pKjQ5aL+azVf0pxNKAQjliGdlIIwMBbdUS9xqsujlGTgdCYBPCeyAxHDT0qHr4Q2kDRlXRIXkDr1LKQ2uj2Moa+/0RPQwhkhaRIhjg7cl12h1wupDMxGKFyG9su3LIO60ILRe3P6Bc+cIZG1uAjHSta8SiByyagQbF5WNNurKTDh37WfGMTS7ZUZm3XlbZ0UFtpCSUi0akqzEmVjgy0twhzV9JEuhDg7cKFek3GfPUxO0ArHLtcT7wOPr8Bpr3SEHvVlN0zH0qkK3nt5iJJRYgZKXiycNUsBh4LwaC2do/25ZVsPD2ymf3zavcEo6Qu2qr0GBFG9EHh1YruH+/y1omX3V4BP4wERP3oazzOKGNCmt0P0dXewDm30dNw5c/nlTxsQ0hzMJCs5QcFtA7/WVKgi/Yy6Y/haMsqbZ6q8mRSBUYSWAGnUx9hSfr9FvbFPQiIUP5o2eEsP73E7zrWyBXMRicC/+I95Rj9EJFbBPZmY2l0DNavtjlrTh+aKo5PS7fZRvPjPWb21WM/xxBVRE9LsS8peUEWICixvcJvnLo9yviMMh4Clb59i6/uxfrmj3AJUPrqbUArAN6AEvlwKA9lBehxbu0dmxdSffNN089Gdp870SvF8vPDyB94iFu1F93nEUsgFkddolHqu+9WHrJJQ3d7WsP5vsPLvKaAyJ5leyeOxAOgZ2MBDTom6XIPnrY=

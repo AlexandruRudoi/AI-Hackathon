@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  similarity-xlu:
+    image: intellidockers/similarity-xlu:1.0-20230421
+    container_name: intellidockers_similarity_xlu
+    ports:
+      - "8994:8989"
+    environment:
+      - PROCESSES=1
+      - APP_SHOW_TEXT=false
+      - LICENSE=INTMRS4AWthN9DhJeYTXunsFCCirTjkxMon2yBIxjLClnWI3vkruM1G/ObF+ediW9H7cmqQnDLLP6qjaADUmZR7ZwpZhPcs0oXMcI7Xwfn4OpNBK21e2R2FM+IziPrhpWC/RKzdKIsElHit+RpbBlbwpixZmq+R+xgwgF64BKH4CGnqCF38ziVxaJhL8XbrZFHJ64+9TFycI91jK6t+yVzxfLHHclVxhkM6t9FNkyfI0iNHvPvgwmSYsECT3kbXYvxeA73KWAIJrKkxfi7Q1xNvgRm4gy4vLVdJxFEVhbefc7jOToPxsQ+eXdnjpT3/N7HeA/wswJ80PPWcTAAHo/7bzwhEw++TDyVvucuT08F2/uGIAN4uCZisjd1gKpTBjVStT93WBQi2+61votfqwOGmBeuCf3tXrWqzd7sv3yqjZkM42fszyIrCtvWboZWRX+J8ffp/+togFZVj9NbDdjTqK5NAzcrPGOuabtt+u63aomoDUkb9+F3ubPOZxlofT9zzK7r6EW2Kl+BCOeICEXe9AcIXC6OIvonEkCnV7yJ2PyFL9LNYyejlsV2rNZ1pFWzVmfgbTUDXI25nCV9JIBacbr56S5BZFRWtLNihlmxfz/1N3wRmBWsM1O6idx131ycxmOAzRab1ATHWUa/7yBe/oRX00wzd+nhr4q38zVFDC5s/ApLXCfJWAVLi0fiAzPWWecihtEzwrn9vy/D3OLMwvoOMcCj48ELJ7rFsPCJtEgkEoPnn8SBPbGOL0fMsAtSo2xJBU/xFlL+aqsNEu6Y83TL3LMjWMJpljMXlPLGRhpihgSS2N3tyyZ5eQ7k3f0ozbctVAs3ASTXNmqfEreH/nuMGO/N1tp1ZMvEvRrgq/ac59nxWIwjAyKMxyxnbrkaaIrpTPZh8YPjtrfq5hLst48RdmpEAN2ouMQyuTJ1buuzlsBw9lQt5lb5YRxAjMuC43+ZdNxG9Vopy6SCmGyZvl1JFNHtdq0l904IB11Benj9a8e+01O6RUC/chlvruDfRE1bHwyXliAFacdTZO8nQi/rMj4AQtOVaryn7X8A+8An/UZ7fityoZqiJykZSemZZQeSJCevQJB5eZqDM/Iguw8R7jrSzvkl04j4g1FZyFTL7UG3wLuVn5jNMjluUyRpVTIK7fSapxAHw++LG4AyDkduOTA7p0020ehbHTITlGYb0MEoBUq5OnqgBAQaTP

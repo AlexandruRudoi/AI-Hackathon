@@ -30,7 +30,13 @@ library(xgboost) # classification
 
 ## Upload text
 # Path to the .txt file
-file_path <- "demo\\input.txt"
+args <- commandArgs(trailingOnly = TRUE)
+
+if (length(args) < 1) {
+  stop("Please provide file name as argument.")
+}
+
+file_path <- args[1]
 
 # Read the file
 sample <- readLines(file_path)

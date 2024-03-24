@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  classifier-clickbait-ron:
+    image: intellidockers/classifier-clickbait-ron:2.0-20230424
+    container_name: classifier-clickbait-ron
+    ports:
+      - "8989:8989"
+    environment:
+      - PROCESSES=1
+      - APP_SHOW_TEXT=false
+      - LICENSE=1D9c1A3LOc5ApDvOK/4m0pFtUhlq3JV8j2+Hc3y4Lrypwf/ms4HY96m3lwtVuM/vIBMXCZQJxYbI3UHE8DS4Szq3V27lGMyJTg0kyFa0WO0reOidrd6gSV7K4mFhx1HjfGgoiUS8jSQhBrjcm9+UHUiV9qfw93VBZhlJ1wY9SqqzdqwqGhrbDe/uKlwj0K4w7UvMfNqFnyWk1a+lBP1/ZJwCzVqFuffM9l6QEuTan9dHNvGT5b697i0trKypRYRDebh5tnap/cN9/eyKMYDvNwK2vTCrO2j4vQoqD+GuPx0CSdPhBoCEux+lMqnhgB3OMWDmjKQBbCcjWcXUI6hbyrLtLbl+HHRaA/L5OpDisYAHMiHMZyD56qfaq7yCIDwnZ65GPOJc487yab28ZXKsyYpMBSfL0mr46Vrmq6KvbseJyygsxaTFe4DbacEFcgOaV1KGHqYofj6ArsoC6Hvajx+tXsY1AL1u7eRzMjk9JAi9giiD9xEinRy141kFcl936Z+Ok3BAhddviOMkUo0RPLo/I6k2lfTQ/HzKiTaFtdCFoDQD7zUdMn6XMvYJF5VMIbu5+bTrT7xMTEcfpo874K+kfBjLadDvPMggAnzlHghvaVV/ldtCIXmmp1qkWaDHOBFFXQpwCsT5JoA/bGsuyAv9oDroymssMBTKs4zw7m/xV3r4x94AcJeBGnK7NW5BBXL3Om+5V0Kt9fOPBlnJhPlxI72z5e1lmruZQLWou/sI2jsvYBOmoZs/oFI50WAcOxvm24myULDEkKFuQ1UTwLeyeHBrp4YuPk5P9aNAPf0PkZH1C9ZxnDfvnj8OZUCpB0JWzN0s4KVl4wneU5Be/jiAD0ltYYKtFqzmorp/ldNy6+wZ5WEf/Wk0pFa+5vCLE5H3vqs15YYMli2bseGJ1+iGmclGqrpEkUqZt8Hyl4GxemlO9s07y/Xw0Fyd6g2HQU6tlaV+RMuEA6f5rXfqIJT1EgJVF4e2K9kuZgr76uTyFbw7xOznwiKxy657dOaCWGkkQjx+ZNvizaHNK+w1aDPjn3eC87Q6r7/u+cyTcpGHVduvOPiX2SyxqUJdOgQ6kz2BG425/sbV7vPkDbT2vBNFC3mWiNRVw8Y3DqN1U7qV809PqGgE2NzLMKK094WQt8dchRmdoO83o75rvn+903YTcCSKF1vGPuiC++sre0nXxZGUOPQK0pF1XfP3QsT7K3T2+mqNJuwQR04DsHfDGA==
+
+    

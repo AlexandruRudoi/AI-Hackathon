@@ -1,0 +1,27 @@
+version: "3.4"
+
+services:
+  # presidio:
+  #   image: intellidockers/presidio:latest
+  #   container_name: intellidockers_presidio
+  #   ports:
+  #     - "5001:3000"
+  #   environment:
+  #     - PROCESSES=1
+  entity-extractor-xlu:
+    image: intellidockers/entity-extractor-xlu:3.4-20240303
+    container_name: intellidockers_entity-extractor-xlu
+    ports:
+      - "8992:8989"
+    environment:
+      - PROCESSES=1
+      - APP_SHOW_TEXT=true
+      # - CORE_ANONYMIZER_URL=presidio:3000
+      - LICENSE=+Un9EX/igos1Ik+yrfuC8QHw0fra83z+nUiOQBCY7T4JjAbgW4V8q2y0KGLfCGgvfW6tY5HD/4v5T9nm3CtR8LLHuiC/c4upiAEGzyLE0NCSWUTXVZpJtCuqE4pBzLbMYAEBKAo/Q2c2xWS2gIvpQI6AqkMUtLQRuSBHp6beJE4zuAu5I1kSbquCKXRmwaMIE6tC+rZCqYVFosY00U1GVmynlkRzzjRablNqSmZQTfAJJqWpct5w2jMKtNbw36ZSlQjDzapJuvO6k7g3eCjJcNqcp1bk/bECrcGPd96WxpCO+jPEdovuBXty7KiZLZHpUDJm3J9KOUgeoQ7ki39SI07eSNv5OIJjJ0KxdCcmYRU7lWphzUDlbhuNxRjHnxGmHQWbv//LWV70ydATtMXUZ7puOq+VhwGMtgLeldnKJ/MdGnCZzTXEHwgu/sKRzNyBDguSpNIbSmwTEnQY5nSQkiyHIq612wxqHRgnHs7C0p4jqLE4wJU9ekrfflFK4JQEI2PGyi/zQ3JBNYEEBFY4LUr96lTFkySrfCDVXkXbO0PyZc2FlSdwDVXrTNVo3bw43be46MWuelPwZZSm3jZhMSb+H1oUi0t/IvOfnFX1QH+lBBpk12VrCCFIwbYFmvsh2m6fhs8p3T73hNDqW0j4ccmKMIoTGy6kcWcUVpiidCIOkCHkacviM4tAx5SAwIzGwgCQqCzGPvZarwC2ofBvixBrqAVVOB8I1MMf0kB5imcyW37rzx2OvYt33jlz8GREZQjIOOnGUZvWZPpxKe3E+XgEhs8e8iC93e/2j7G8mzyMrMM166NX1X7Ywqdd4ojyR6v/ZfArjUE4vkOzpwvQSeFHEtjxdE+tY9Ptmig7jNA37iw8XCJco7J/HukbjvweNoXLLYTLyQ6dFAJsBOdhfd6EBJ5HX0UtwVi6FJVCOPZlM1SN83JyzWa0rUXhzpXxt7j+9fg96ph/jsV3W7KVz397DATs2gdU2+dY6MMufR6/f/AAZrOiibFC/iSAsgmwq3B12LY8dG1WuXTA5GGWTQx82TAq4TGRdp1AvmbMhTjZln+stwXqNFkwUMyYWTOnQpE4AEOEatk8twRc2GawQsvB1JMrdUUh6cGfCq3ZkACJuRkOm2xAdqR1tzpozQbDplpVu/MkqSxoJaV5vczY6V7zDIi0CxLOSoZ+Fr3TNeoIMKdyMSG8jPooVP6PtlSd
+
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #       - driver: nvidia
+    #         capabilities: [gpu]

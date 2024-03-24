@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  metadata-extractor:
+    image: intellidockers/metadata-extractor:2.2-20230517
+    container_name: intellidockers_metadata-extractor
+    ports:
+      - "8990:8989"
+    environment:
+      - PROCESSES=1
+      - APP_SHOW_TEXT=false
+      - LICENSE=XzBafpN/C85/QdD0r5smRqeSr+O2JCx+yuP0OK50gi+LxGrN43G365o8YKTp34mmGCwBUrR5yqxRmvSy3UFj8OV6RoXpCBM+RG+lxlGWH6+fJXjpIz3fzL9RC0PrnmmH8eUxcQu8O68puozeS7zIvOKJd6Vg2INShJ4dmdJkejUvimng5wbGDqLio7IYTJYnUsyes+4uPwPB9vuQW18b//GDWudSzydaK/6DwIzH27Ot/v0KliK0Oi22+7K9PrtjUhLeuB/AKiwm90+6oaaCt/BdPq5hJatoHiuw0u/ep8kj5dUd/oaS9RNLDjE3VxPYtFBo6cxHNqYHh0WEp4/+Hw+2YtnQ4xUT9mtl0MalFQhyfZ/SIwGE99GaFanXIg1zGNP2qfuQ7tglzfJXJEjRKhF2VaMBeZ7br0H6OtrVs80Gf4xU/t4xYvQ12hxaO/QaFAELUL3/UpGpuYu+HsBG6di/KyHBHnOIxO6jJ+16ZZXC5I7094MC23AI4mCIH8DIzTl4RBoTIHkswNZk2LAbIe/teIxVPthHDSRSUDjFXp4ALv0H8eXpz/L8ivkNCx7OhccUHx2n5JPSEUuzDeUDgA7fAiBvsbJpatxeVgwOi6wdSJOzYjrjo8zkPX5hEKJq1e6xHZ46WuPIeIcwbyTsIncUC/SLvYYhKj5CVO/20w1Tj5okIeN75yPvvEX8XhpUF0VIdAAdAapS0HTr3z5kZGR1cDKaDFrwcl58+x1MkqC53hw1vadjucqoKwqt2Nn6sxLOGcm8XXZ19Fu9BMjRan31coGawZ/wtAKvwHznIv7S3DutzwKcOmrfrBQM8TPU838p0Na3tjbXJcGxPt9MasPirVB5WloEibj8LRBBHtVMMHTlsAJifLF5AMz+TB23I8i2SO01fhBPZCKZm2hQDprs1j4i/TdzBdgUHcR1vS/5GuhKo8iQ8rEUo807rRF/OpNZ38UzrDEUdmWbpX4Te4pAhdIvYsYhJIn84LpKF579OSYkNm4ohNNxXAnlEGMq9WtyhrksB4h68dHwnpFQnX75r0Bqb+76xZrJzU43w9nXfzMZCqnXM+YqW1kR9GR3mu7akeSUHsehjBvTeRq8oplmaomvRIwI5CSHBW1/B+k3UZXrIEvPlUCcS8BzIr2BPsjFUGq0tkAk5lLtypxYAUd9gjxis2n2b88HT/on8lw=

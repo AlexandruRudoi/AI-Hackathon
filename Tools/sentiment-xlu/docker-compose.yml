@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  sentiment-xlu:
+    image: intellidockers/sentiment-xlu:1.0-20240226
+    container_name: intellidockers_sentiment-xlu
+    ports:
+      - "8993:8989"
+    environment:
+      - PROCESSES=1
+      - POST_PROCESS=f:0
+      - APP_SHOW_TEXT=false
+      - LICENSE=qQyDa8ULzTT/HhTlp4FFrzDyvlXWQ9xCrr2dXlbHSsfou0QnTEcAD+gWoSAD1IQlANqBmyzeyfA8ktmQn73VjLw/kAK+7N1NQhXPAsZEXEp5D40y0Nz7UqkC79zWqLb1yAWmMclmOjkfzk1MpmTSfxmHbhBi69C+4Jtb4QRuxS3XVnBDkhfBbdrA8fjsP5Q6W6ZYTiWnt5x5Y11+2O6C+cv+UysizsY4MSlvKE/EoPNwftLnunPtOc/KHw9U1GdmjMSdWKkKSRZRETuV2+17c+15qG9vxyPJu5eUBAY8+ywBwXL14fl6K9EM2QgM/0sLjj7NT9zQo+fXOdXlx6d/4qjjxnrfllNQd278ZJnLZAW+bJAhx0P7DO3i9h6dsyYEsauShlkapC7g9I4m1NqDlwYXcleAkI6/ycS3utfcheglh2AGeJD2kbKDR0LaUv4P945KibNX245a5/PjdKZmfhhu9hy8pOhshcu0pfBRTrtYmeCAZ7XVhtcmTh/kLGSyzmZQqh3u7/Mt6AT1UsWYtnltjTeOWYxCCee1ki/RXjgJUkIyuqS3v52roYCbBR4VgO7bpWTaMY2+ZbjynmMM9uGhDpBJzPc1XUYuYvEpcUx9v1Ymcrzqk9oqEgal/C0+ckhQu4AZ2zbx+Vjax3HBApqT9LypKDc6NnnEkubJUACyEjghoFVJ/SviAk+9Y5toKwjWQXVBkr0/1RqsH4Qow4eEloe6GHanoMyViTgSpimRQNfUhpKwkMnkNAd+8Jm50+rBCAEDzzx++BwhrWAeXJCHOprc0tJBg0kuWU6ghUY/nvnvX/go9wxReMlLdNHjVI0Ptq8Fh3iLlMeWv2aGJ5TXeiBV70XqWsKQc6iD6tOBilFzvctD9bT51wgWOqeva1WM3Q6o3QLIl5Xthr1SgpQTKCieqO66N+yBqHLCMCtmTwq576L57OYVsUBDtsK/nr8SUjTufkFyU/6sIBeccIekUVgP/Pv8hzOGEsyWxRqo+WhwWEJaY5fekaZk+udlC4/9kxd6lg/SGQh+Geqz8kqEGQKcNTegBtK2B1LhC4yFpuhkSydruoe+CFg1Oa/JCdNn0juSBFqtPwWhtwjLx1wdsjuM1tkH7eqIBBMyPIBpG+AEvcQod5QhxbzDjRjjHWptqqUL5eYNShbcOwDWH6xKQQcU5wfhXNZAJoRuv70KW1yr1r+pxYnJRzd1OZbA
