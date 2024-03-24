@@ -46,11 +46,21 @@
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Quality Score: {{ quality_score }}%</h5>
-                        <p class="card-text">Author Name: {{ author_name }}</p>
-                        <p class="card-text">Author Score: {{ author_score }}%</p>
-                        <p class="card-text">Entity Score: {{ entity_score }}%</p>
-                        <p class="card-text">Sentiment Label: {{ sentiment_label }}</p>
-                        <p class="card-text">Sentiment Score: {{ sentiment_score }}%</p>
+                        {% if author_name %}
+                            <p class="card-text">Author Name: {{ author_name }}</p>
+                        {% endif %}
+                        {% if author_score is defined %}
+                            <p class="card-text">Author Score: {{ author_score }}%</p>
+                        {% endif %}
+                        {% if entity_score is defined %}
+                            <p class="card-text">Entity Score: {{ entity_score }}%</p>
+                        {% endif %}
+                        {% if sentiment_label %}
+                            <p class="card-text">Sentiment Label: {{ sentiment_label }}</p>
+                        {% endif %}
+                        {% if sentiment_score is defined %}
+                            <p class="card-text">Sentiment Score: {{ sentiment_score }}%</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>

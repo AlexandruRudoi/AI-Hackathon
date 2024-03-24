@@ -41,7 +41,7 @@ def home():
             print("Error:", response_cont.text)  # Print the error message if the request failed
         
         # Write text to a file
-        with open('file.txt', 'w') as file:
+        with open('file.txt', 'w', encoding='utf-8') as file:
             file.write(text)
         
 
@@ -84,11 +84,32 @@ def home():
         
         # Extracting variables from the quality response
         quality_score = quality['qualityScore']
-        author_name = quality['scoreComponents'][0]['meta']['authorName']
-        author_score = int(quality['scoreComponents'][0]['score'] * 100)
-        entity_score = int(quality['scoreComponents'][1]['score'] * 100)
-        sentiment_label = quality['scoreComponents'][2]['meta']['sentimentLabel']
-        sentiment_score = int(quality['scoreComponents'][2]['score'] * 100)
+        # Extracting variables from the quality response
+        try:
+            author_name = quality['scoreComponents'][0]['meta']['authorName']
+        except KeyError:
+            author_name = None
+
+        try:
+            author_score = int(quality['scoreComponents'][0]['score'] * 100)
+        except (KeyError, ValueError):
+            author_score = 0
+
+        try:
+            entity_score = int(quality['scoreComponents'][1]['score'] * 100)
+        except (KeyError, ValueError):
+            entity_score = 0
+
+        try:
+            sentiment_label = quality['scoreComponents'][2]['meta']['sentimentLabel']
+        except KeyError:
+            sentiment_label = None
+
+        try:
+            sentiment_score = int(quality['scoreComponents'][2]['score'] * 100)
+        except (KeyError, ValueError):
+            sentiment_score = 0
+
         
         # Pass the variables to the template
         return render_template("index.html", quality_score=quality_score, author_name=author_name, author_score=author_score, entity_score=entity_score, sentiment_label=sentiment_label, sentiment_score=sentiment_score)
